@@ -22,6 +22,7 @@ class LinkedList
     ~LinkedList() = default;
 
     void creatList(std::vector<int> &vals);
+    ListNode *getHead();
 
   private:
     ListNode *head = nullptr;
@@ -54,6 +55,11 @@ void LinkedList::creatList(std::vector<int> &vals)
         p->next = tmp;
         p = tmp;
     }
+}
+
+ListNode *LinkedList::getHead()
+{
+    return this->head;
 }
 
 #endif // LINKEDLIST_H
